@@ -1,0 +1,42 @@
+KSP 双 DLC 简体中文补丁 v1.0 —— 使用说明
+================================================
+
+适用：Kerbal Space Program 1.12.x（Steam / GOG / Epic 均可），需已安装
+      《创造历史 Making History》与《破土动工 Breaking Ground》
+程序：KSP_DLC_Chinese_Patch_v1.0.exe（单文件，词典已内嵌）
+
+【使用方法】
+1. 完全关闭游戏（安装器会检测，运行中不允许安装）。
+2. 双击 KSP_DLC_Chinese_Patch_v1.0.exe。
+3. 程序一般会自动找到游戏目录；找不到就点“浏览…”选到
+   ...\Kerbal Space Program 这一层（里面应有 GameData 文件夹）。
+4. 点“安装中文”，看到“完成”即可。首次安装会自动备份 settings.cfg。
+5. 启动游戏 → 设置(Settings) → 综合/General → 语言(Language) → 简体中文。
+
+【重要：本补丁只翻 DLC】
+它不包含游戏本体的中文。如果你的本体还是英文，请先装本体汉化
+（例如 TinyGrox 的 KSP_Chinese_Patches：github.com/tinygrox/KSP_Chinese_Patches），
+再运行本安装器。安装器检测到本体无中文时也会提示。
+
+【卸载 / 还原】
+打开程序 → 点“卸载（还原英文）” → 会删除两个词典并把 settings.cfg
+恢复到首次安装前的备份（settings.cfg.bak_时间戳）。
+
+【常见问题】
+· Windows 提示“已保护你的电脑”：这是未签名程序的常规提示，
+  点“更多信息”→“仍要运行”。源码在本仓库 src/Installer.cs，可自行编译核对。
+· 提示“不是 KSP 目录”：要选 KSP 根目录，不是 GameData 或 KSP_x64_Data。
+· 提示“没找到 SquadExpansion”：说明没装这两个 DLC，装上再试。
+· 装完 DLC 部件还是英文：确认语言是简体中文并重启游戏；仍不行请到
+  仓库 Issues 反馈具体部件名。
+· “创造历史”任务剧本里的剧情文字仍是英文：那部分写在 .mission 文件里，
+  KSP 的词典机制无法翻译，不属于本补丁范围。
+
+【它到底改了什么】
+只新增两个文件，不改动任何原有文件：
+  GameData\SquadExpansion\MakingHistory\Localization\zh-cn.cfg
+  GameData\SquadExpansion\Serenity\Localization\zh-cn.cfg
+外加把 settings.cfg 里的 LANGUAGE 设为 zh-cn（改动前已备份）。
+删除这两个文件即可完全恢复。
+
+—— 仅供个人学习交流使用，请勿用于商业用途。

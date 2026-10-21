@@ -1,0 +1,17 @@
+### 构建产物临时文件
+dist/*.zip
+install-log.txt
+*.bak_*
+
+### PowerShell
+*.ps1xml
+
+### 编辑器
+.vs/
+.idea/
+*.user
+*.suo
+
+### Windows
+Thumbs.db
+Desktop.ini
